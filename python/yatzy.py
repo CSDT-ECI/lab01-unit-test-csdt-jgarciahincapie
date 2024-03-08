@@ -99,6 +99,15 @@ class Yatzy:
             if (self.dice[at] == 6):
                 sum = sum + 6
         return sum
+
+    def crazyChance(self): 
+        sum = 0
+        for i in range(len(self.dice)): 
+            if(self.dice[i] %2 == 0) : 
+                sum += self.dice[i] * 3 
+            else: 
+                sum += self.dice[i] * 2 
+        return sum 
     
     @staticmethod
     def score_pair( d1,  d2,  d3,  d4,  d5):
